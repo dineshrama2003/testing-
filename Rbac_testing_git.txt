@@ -3,7 +3,7 @@ PASSWORD='abc123'
  DEFAULT_ROLE = myrole
  DEFAULT_SECONDARY_ROLES = ('ALL')
  MUST_CHANGE_PASSWORD = TRUE;
- 
+ select * from db_table;
  
  
  CREATE USER user1 
