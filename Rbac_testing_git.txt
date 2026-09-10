@@ -1,0 +1,62 @@
+CREATE USER user1 
+PASSWORD='abc123'
+ DEFAULT_ROLE = myrole
+ DEFAULT_SECONDARY_ROLES = ('ALL')
+ MUST_CHANGE_PASSWORD = TRUE;
+ 
+ 
+ 
+ CREATE USER user1 
+ PASSWORD='abc123' 
+ DEFAULT_ROLE = myrole 
+ DEFAULT_SECONDARY_ROLES = ('ALL') 
+ MUST_CHANGE_PASSWORD = TRUE
+ DISPLAY_NAME = <string>
+  FIRST_NAME = <string>
+  EMAIL = <string>
+  DEFAULT_WAREHOUSE = <string>
+ 
+ 
+ objectProperties ::=
+  PASSWORD = '<string>'
+  LOGIN_NAME = <string>
+  DISPLAY_NAME = <string>
+  FIRST_NAME = <string>
+  MIDDLE_NAME = <string>
+  LAST_NAME = <string>
+  EMAIL = <string>
+  MUST_CHANGE_PASSWORD = { TRUE | FALSE }
+  DISABLED = { TRUE | FALSE }
+  ALLOWED_INTERFACES = ( <list_of_interfaces> )
+  DAYS_TO_EXPIRY = <integer>
+  MINS_TO_UNLOCK = <integer>
+  DEFAULT_WAREHOUSE = <string>
+  DEFAULT_NAMESPACE = <string>
+  DEFAULT_ROLE = <string>
+  DEFAULT_SECONDARY_ROLES = { ( 'ALL' ) | () }
+  MINS_TO_BYPASS_MFA = <integer>
+  RSA_PUBLIC_KEY = <string>
+  RSA_PUBLIC_KEY_FP = <string>
+  RSA_PUBLIC_KEY_2 = <string>
+  RSA_PUBLIC_KEY_2_FP = <string>
+  TYPE = { PERSON | SERVICE | SERVICE_AGENT | LEGACY_SERVICE }
+  WORKLOAD_IDENTITY = ( <list_of_properties> )
+  COMMENT = '<string_literal>'
+  
+  -------------------------------------------------------------------------testing--------------------------------------------------------------------
+
+use role useradmin;
+CREATE USER CODINGBODHI_STUDENT
+PASSWORD='Coding12345' 
+DEFAULT_ROLE = 'ANALYST'
+MUST_CHANGE_PASSWORD = TRUE
+DISPLAY_NAME = 'Abishek'
+FIRST_NAME = 'Abishek'
+last_name='ganapathy'
+EMAIL = 'abiseckganapathy06@gmail.com'
+DEFAULT_WAREHOUSE ='DEV_WH';
+
+------send to email-----  
+Your Snowflake Account DetailsLogin URL: [Paste the URL from Step 2 here]
+Username: codingbodhi_studentTemporary 
+Password: TemporaryPassword123!Note: You will be prompted to choose a permanent password when you log in for the first time.
